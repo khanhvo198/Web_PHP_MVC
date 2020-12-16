@@ -1,0 +1,25 @@
+        
+        <div class="footer row justify-content-center">
+            <div class="col-md-8 d-flex">
+                <div class="pt-4 mr-auto">
+                    <div class="d-flex">
+                        <a href="../about/about.html" class="align-self-center pr-4" style="color:#000">About us</a>
+                        <a href="../product/product.html" class="align-self-center pr-4" style="color:#000">Course</a>
+                        <a href="../pricing/pricing.html" class="align-self-center pr-4" style="color:#000">Pricing</a>
+                        <a href="../contact/contact.html" class="align-self-center pr-4" style="color:#000">Contact</a>
+                        <a href="#" class="align-self-center pr-4" style="color:#000">Login</a>
+                    </div>
+                    <p class="pt-3">©Copyright 2020 BK Academy</p>
+                </div>
+                <div class="pt-2">
+                    <img src="./public/images/index/image 8.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+</html>

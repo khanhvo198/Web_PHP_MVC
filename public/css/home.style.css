@@ -1,0 +1,150 @@
+body{
+    
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: black;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    text-decoration: none;
+    color: white;
+    transition: ease 0.3s;
+}
+
+
+
+
+ul {
+    list-style-type: none;
+}
+
+.btn-primary {
+    border-radius: 0%;
+    background-color: #00A8E8;
+    border:none;
+}
+
+
+
+
+
+.slider {
+    background-image: url("../images/index/slider.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    color: white;
+}
+
+.slider a {
+    width: 15rem;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #0098C0 0%, #88EC92 100%);
+}
+
+
+.partner {
+    background-color: #D6F7EE;
+}
+
+
+.content .content-left {
+    /* padding-right:200px;
+    padding-left:400px */
+}
+
+.content .content-left .content-left__title {
+    color:#42F2CB;
+    text-align:right;
+    font-size:24px;
+    margin-bottom:0;
+    font-weight:600;
+}
+
+.content .content-left .content-left__greeting {
+    text-align: right;
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:3rem;
+}
+.content .content-left .content-left__paragraph {
+    text-align: right;
+    line-height: 30px;
+} 
+
+
+.question-video .question-video__title {
+    color:#42F2CB;
+    font-size:24px;
+    margin-top:2rem;
+    font-weight: 700;
+}
+
+.question-video .question-video__paragraph {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+.snapshot .snapshot__title {
+    color:#42F2CB;
+    font-size:24px;
+    font-weight: 600;
+}
+
+.snapshot .snapshot__content {
+    font-size: 38px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.snapshot .snapshot__paragraph {
+    line-height: 33px;
+    font-size: 22px;
+    text-align: left;
+}
+
+.snapshot a {
+    font-size: 22px;
+    color: #000;
+    padding-right: 3rem;
+
+}
+
+.snapshot .learn-more-arrow {
+    width: 110px;
+}
+
+/* .background-runner {
+    background-image: url("./images/index/background-runner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+
+
+.contact {
+    background-color: #D6F7EE;
+}
+
+.contact .contact__title {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.contact .btn {
+    border-radius: 0;
+}
+
+.contact .contact__quote {
+    font-size:12px; 
+}
+
+.footer {
+    background-color: #F6F2F1;
+    
+}
