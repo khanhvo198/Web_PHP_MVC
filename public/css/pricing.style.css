@@ -1,0 +1,131 @@
+body{
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: black;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: white;
+}
+
+a {
+    color:#000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+    transition: ease 0.3s;
+}
+.header a:hover {
+    text-decoration: none;
+}
+
+.btn-primary {
+    border-radius: 0%;
+    background-color: #00A8E8;
+    border:none;
+}
+
+
+.header {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    height: 4rem;
+}
+
+.header .brand h5 {
+    color :white;
+    margin:auto;
+}
+.slider {
+    background-image: url("../images/pricing/image\ 9.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    color:white;
+}
+
+.slider a {
+    width: 15rem;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #0098C0 0%, #88EC92 100%);
+}
+
+.img-text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+.card {
+    border: 1px solid #CFCFCF;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 2em;
+}
+
+
+.card p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 2em;
+    margin-top: 0;
+}
+
+.card h3 {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.btn-secondary {
+    width: 250px;
+    height: 60px;
+    background: #42F2CB;
+    border: none;
+    border-radius: 0%;
+    color: #000000;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+hr {
+    width: 70%;
+    border: 1px solid #000000;
+    margin-bottom: 2em;
+    margin-top: 0;
+}
+
+.btn-secondary:hover {
+    background-color: #00CCFF;
+}
+
+
+.footer {
+    background-color: #F6F2F1;
+}
