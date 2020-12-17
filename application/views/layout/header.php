@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
 
     <link rel="stylesheet" href="./public/css/<?php echo $this->data["css"];?>">
-    <title>BK ACADEMY</title>
+    <title><?php echo $this->data["title"];?></title>
 </head>
 <body>
     <div class="container-fluid d-flex flex-column">
