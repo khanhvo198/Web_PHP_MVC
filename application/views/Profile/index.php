@@ -1,6 +1,6 @@
 <?php $this->view("layout/header"); ?>
 
-    <div class="profile row justify-content-center">
+    <div class="profile row justify-content-center" style="height:80vh;">
         <div class="col-md-12">
             <div class="row justify-content-center">
                 <div class="col-md-4 d-flex justify-content-center">

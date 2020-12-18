@@ -1,7 +1,7 @@
 <?php $this->view("layout/header"); ?>
 
     <div class="row login">
-        <div class="col-md-12" style="margin-top: 5em;">
+        <div class="col-md-12" style="margin-top: 5em;height:80vh;">
             <form action="" class="d-flex flex-column align-items-center login-form">
                 <div class="col-md-6">
                     <h3 class="text-center">Login</h3>
