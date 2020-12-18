@@ -1,6 +1,7 @@
 <?php $this->view("layout/header"); ?>
 
-        <div style="margin-top: 200px;">
+    <div class="row login">
+        <div class="col-md-12" style="margin-top: 5em;">
             <form action="" class="d-flex flex-column align-items-center login-form">
                 <div class="col-md-6">
                     <h3 class="text-center">Login</h3>
@@ -43,16 +44,18 @@
                     </p>
                 </div>
 
-                <div class="row d-flex flex-column align-items-center">
+                <!-- <div class="row d-flex flex-column align-items-center">
                     <div class="align-self-start mt-5">
                         <img src="./public/images/product/text.png" alt="">
                     </div>
                     <div class="align-self-center">
                         <img src="./public/images/product/astronaut.png" alt="">
                     </div>
-                </div>
+                </div> -->
             </form>
+        </div>
     </div>
+
 
 
 <?php $this->view("layout/footer"); ?>

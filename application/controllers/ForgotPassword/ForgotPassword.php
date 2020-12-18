@@ -3,7 +3,7 @@
         protected $data;
 
         function index() {
-            $this->data["css"] = "forgot_password.style.css";
+            $this->data["css"] = "forgotpassword.style.css";
             $this->data["title"] = "Forgot Password";
 
             

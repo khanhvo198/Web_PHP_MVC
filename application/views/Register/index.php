@@ -9,12 +9,12 @@
             <input type="password" class="form-control" id="password" placeholder="Password*">
             <button type="submit" class="btn btn-secondary">REGISTER</button>
 
-            <!-- <div class="align-self-start mt-5">
+            <div class="align-self-start mt-5">
                 <img src="./public/images/product/text.png" alt="">
             </div>
             <div class="align-self-center">
                 <img src="./public/images/product/astronaut.png" alt="">
-            </div> -->
+            </div>
         </form>
     </div>
 
