@@ -126,22 +126,6 @@ img {
     margin-left: 0.5em;
 }
 
-
-.btn-dark {
-    width: 200px;
-    height: 60px;
-    background: #000000;
-    border: none;
-    border-radius: 0%;
-    color: #FFFFFF;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    margin: 1em;
-}
-
-
 .profile {
     background-color: #D6F7EE;
     padding-top: 1em;
@@ -190,9 +174,12 @@ form {
     height: 20em;
 }
 
-label {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
+
+form {
+    width: 100%;
+}
+
+
+input {
+    width: 100%;
 }
