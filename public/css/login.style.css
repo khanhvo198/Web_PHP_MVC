@@ -2,6 +2,15 @@ body{
     
 }
 
+h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    color: #000000;
+}
+
 a {
     color:#000;
 }
@@ -62,4 +71,12 @@ ul {
 .footer {
     background-color: #F6F2F1;
     
+}
+
+.login {
+    background-color: #D6F7EE;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 0px;
+    padding-right: 0px;
 }

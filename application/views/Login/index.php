@@ -1,5 +1,6 @@
 <?php $this->view("layout/header"); ?>
-        <div style="margin-top: 200px;height: 62vh;">
+
+        <div style="margin-top: 200px;">
             <form action="" class="d-flex flex-column align-items-center login-form">
                 <div class="col-md-6">
                     <h3 class="text-center">Login</h3>
@@ -20,6 +21,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <div class="form-group">
+                        <a href="./Register" style="font-size: 14px;font-weight: 600;" >Register</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
                     <div class="form-group form-check" style="padding-left:75%;">
                         <input type="checkbox">
                         <label class="form-check-label">Remember me</label>
@@ -36,8 +42,17 @@
                     <p class="text-center" style="font-size: 14px;">Haven’t purchase the course yet? Click <a href="../product/product.html" style="color: #42F2CB;font-weight: 600;text-decoration: underline;">here</a> to purchase
                     </p>
                 </div>
-            </form>
 
-        </div>
+                <div class="row d-flex flex-column align-items-center">
+                    <div class="align-self-start mt-5">
+                        <img src="./public/images/product/text.png" alt="">
+                    </div>
+                    <div class="align-self-center">
+                        <img src="./public/images/product/astronaut.png" alt="">
+                    </div>
+                </div>
+            </form>
+    </div>
+
 
 <?php $this->view("layout/footer"); ?>
