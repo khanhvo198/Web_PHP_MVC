@@ -1,0 +1,44 @@
+<?php $this->view("layout/header"); ?>
+
+    <div class="profile row justify-content-center">
+        <div class="col-md-12">
+            <div class="row justify-content-center">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <img class="profile-img" src="./public/images/profile/TC_Avatar.png" alt="">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-start">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">First Name:</th>
+                                <td>This is first name</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Last Name:</th>
+                                <td>This is last name</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Email:</th>
+                                <td>email@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Phone:</th>
+                                <td>0123456789</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="align-self-center btn btn-secondary">UPDATE PROFILE</button>
+                    <a href="./ChangePassword" class="align-self-center" style="font-size: 14px;font-weight: 600;" >Change password</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="align-self-start mt-5">
+            <img src="./public/images/product/text.png" alt="">
+        </div>
+        <div class="align-self-center">
+            <img src="./public/images/product/astronaut.png" alt="">
+        </div>
+    </div>
+
+<?php $this->view("layout/footer"); ?>

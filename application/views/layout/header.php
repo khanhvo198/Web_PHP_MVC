@@ -34,6 +34,12 @@
                     <a href="./Contact" class="align-self-center pr-4 nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
+                    <a href="./MyClass" class="align-self-center pr-4 nav-link">My Class</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./Profile" class="align-self-center pr-4 nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
                     <a href="./Login"  class="btn btn-primary align-self-center nav-link" style="color:#fff">Login</a>
                 </li>
               </ul>
