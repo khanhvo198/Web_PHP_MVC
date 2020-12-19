@@ -15,12 +15,13 @@
                 $oldpassword = $_POST["oldpassword"];
                 $newpassword = $_POST["newpassword"];
                 $newpassword = password_hash($newpassword, PASSWORD_DEFAULT);
+                
+                $userModel = $this->model("User");
+                $result = json_decode($userModel->getUser($_SESSION["email"]), true);
 
-                if(password_verify($oldpassword, $_SESSION["password"])) {
-                    $userModal = $this->model("User");
-                    $result = $userModal->updatePassword($_SESSION["email"], $newpassword);
+                if(password_verify($oldpassword, $result["Password"])) {
+                    $result = $userModel->updatePassword($_SESSION["email"], $newpassword);
                     if ($result === true) {
-                        $_SESSION["password"] = $newpassword;
                         echo json_encode(["status" => "success"]);
                     } else {
                         echo json_encode(["status" => "fail"]);
