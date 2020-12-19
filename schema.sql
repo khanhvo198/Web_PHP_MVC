@@ -13,7 +13,6 @@ create table User (
 );
 
 create table Course (
-    Code varchar(255),
     Name varchar(255),
     Price int unsigned,
     StartDate date,
@@ -22,13 +21,13 @@ create table Course (
     StartHour time,
     EndHour time,
     Description varchar(1000),
-    primary key (Code)
+    primary key (Name)
 );
 
 create table Learn (
     Email varchar(255),
-    Code varchar(255),
+    Name varchar(255),
     foreign key (Email) references User(Email),
-    foreign key (Code) references Course(Code),
-    primary key (Email, Code)
+    foreign key (Name) references Course(Name),
+    primary key (Email, Name)
 );
