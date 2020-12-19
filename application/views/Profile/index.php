@@ -1,6 +1,6 @@
 <?php
     if(!isset($_SESSION['signedin'])){
-        header("Location: http://localhost/Web_Assignment_02/Login");
+        header("Location: ./Login");
         exit();  
     }
 ?>
@@ -16,26 +16,9 @@
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-start">
                     <table class="table">
-                        <tbody>
-                            <tr>
-                                <th scope="row">First Name:</th>
-                                <td><?php echo $_SESSION["firstname"] ?></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Last Name:</th>
-                                <td><?php echo $_SESSION["lastname"] ?></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Email:</th>
-                                <td><?php echo $_SESSION["email"] ?></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Phone:</th>
-                                <td><?php echo $_SESSION["phone"] ?></td>
-                            </tr>
-                        </tbody>
+
                     </table>
-                    <button type="button" class="align-self-center btn btn-secondary" data-toggle="modal" data-target="#staticBackdrop">UPDATE PROFILE</button>
+                    <button type="button" class="align-self-center btn btn-secondary edit-profile" data-toggle="modal" data-target="#staticBackdrop">UPDATE PROFILE</button>
                     <a href="./ChangePassword" class="align-self-center" style="font-size: 14px;font-weight: 600;" >Change password</a>
                 </div>
             </div>
@@ -65,29 +48,124 @@
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">First Name:</label>
-                            <input type="text" class="form-control" id="firstname">
+                            <input type="text" class="form-control" name="firstname"  id="edit_firstname">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Last Name:</label>
-                            <input type="text" class="form-control" id="lastname">
+                            <input type="text" class="form-control" name="lastname" id="edit_lastname">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email:</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" class="form-control" name="email" id="edit_email" disabled>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Phone:</label>
-                            <input type="number" class="form-control" id="phone">
+                            <input type="number" class="form-control" name="phone" id="edit_phone">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Update</button>
+                    <button type="submit" class="btn btn-primary" id="update-profile">Update</button>
                 </div>
             </div>
         </div>
     </div>
 
-
 <?php $this->view("layout/footer"); ?>
+<script>
+
+    $("body").on("click",".edit-profile" , () => {
+        let firstName = document.getElementById("firstname").innerText
+        let lastName = document.getElementById("lastname").innerText
+        let email = document.getElementById("email").innerText
+        let phone = document.getElementById("phone").innerText
+
+        $("#edit_firstname").val(firstName)
+        $("#edit_lastname").val(lastName)
+        $("#edit_email").val(email)
+        $("#edit_phone").val(phone)
+    })
+
+
+    $("#update-profile").on("click" , ()=> {
+        // console.log($("#edit_firstname").val())
+        $.ajax({
+            dataType:'json',
+            url: './Profile/update',
+            type:'post',
+            data: {
+                firstName : $("#edit_firstname").val(),
+                lastName  : $("#edit_lastname").val(),
+                email      : $("#edit_email").val(),
+                phone: $("#edit_phone").val()
+            },
+            success: function() {
+                $("#edit_firstname").val('')
+                $("#edit_lastname").val('')
+                $("#edit_phone").val('')
+                getProfileUser()
+                $(".modal").modal('hide')
+            }
+        })
+    })
+
+
+    const getProfileUser = () => {
+        $.ajax({
+            dataType: 'json',
+            url:'./Profile/getProfileUser',
+            type:'post',
+            data: {
+                email: '<?php echo $_SESSION['email']; ?>'
+            },
+            success: (data) => {
+                printData(data)
+            }
+
+        })
+    }
+
+
+    const printData = (data) => {
+        rows = ``
+        rows += `<tbody>`
+        rows += `<tr>`
+        rows += `<th scope="row">FirstName</th>`
+        rows += `<td id="firstname" >${data.FirstName}</td>`
+        rows += `</tr>`
+        rows +=  `<tr>`
+        rows += `<th scope="row">Last Name:</th>`
+        rows += `<td id="lastname">${data.LastName}</td>`
+        rows += `</tr>`
+        rows += `<tr>`
+        rows += `<th scope="row">Email:</th>`
+        rows += `<td id="email">${data.Email}</td>`
+        rows += `</tr>`
+        rows += `<tr>`
+        rows += `<th scope="row">Phone:</th>`
+        rows += `<td id="phone">${data.Phone}</td>`
+        rows += `</tr>`
+        rows += `</tbody>`
+        $("table").html(rows)
+    }
+
+
+    getProfileUser();
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // console.log(firstName,lastName,email,phone)
+
+
+</script>

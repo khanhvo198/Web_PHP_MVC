@@ -10,11 +10,11 @@
                     // destroy the session
                     session_destroy(); 
                     // redirect to login page
-                    header("Location: http://localhost/Web_Assignment_02/Login");
+                    header("Location: ./Login");
                     exit();
                 } 
             }
-            header("Location: http://localhost/Web_Assignment_02/Home");
+            header("Location: ./Home");
             exit();
         }
 

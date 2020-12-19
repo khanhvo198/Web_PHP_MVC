@@ -25,12 +25,12 @@
                         $_SESSION["email"] = $result["Email"];
                         $_SESSION["phone"] = $result["Phone"];
                         $_SESSION["signedin"] = true;
-                        header("Location: http://localhost/Web_Assignment_02/Profile");
+                        header("Location: ../Profile");
                         exit();
                     }
                 }
             }
-            header("Location: http://localhost/Web_Assignment_02/Login");
+            header("Location: ./Login");
             exit();           
         }
 

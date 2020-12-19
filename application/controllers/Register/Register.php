@@ -22,9 +22,9 @@
                 $result = $userModel->add($firstname, $lastname, $email, $phone, $password);
                 
                 if($result === true) {
-                    header("Location: http://localhost/Web_Assignment_02/Login");
+                    header("Location: http://192.168.64.7/Web_Assignment_02/Login");
                 } else {
-                    header("Location: http://localhost/Web_Assignment_02/Register");
+                    header("Location: http://192.168.64.7/Web_Assignment_02/Register");
                 }
             }
         }
