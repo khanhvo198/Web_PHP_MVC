@@ -13,7 +13,19 @@
             } catch (Exception $e) {
                 return false;
             }
+        }
 
+        public function getUser($email) {
+            try {
+                $sql = $this->connection->prepare("SELECT * FROM User WHERE Email = :email");
+                $sql->execute(array(
+                    ":email" => $email
+                ));
+                $result = $sql->fetch(PDO::FETCH_ASSOC);
+                return json_encode($result);
+            } catch (Exception $e) {
+                return $e->getMessage();
+            }
         }
     }
 ?>

@@ -16,6 +16,7 @@
                 $email = $_POST["email"];
                 $phone = $_POST["phone"];
                 $password = $_POST["password"];
+                $password = password_hash($password, PASSWORD_DEFAULT);
                 
                 $userModel = $this->model("User");
                 $result = $userModel->add($firstname, $lastname, $email, $phone, $password);

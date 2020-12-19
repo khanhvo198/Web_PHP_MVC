@@ -1,3 +1,11 @@
+<?php
+    if(!isset($_SESSION['signedin'])){
+        header("Location: http://localhost/Web_Assignment_02/Login");
+        exit();  
+    }
+?>
+
+
 <?php $this->view("layout/header"); ?>
 
     <div class="profile row justify-content-center" style="height:80vh;">
@@ -11,19 +19,19 @@
                         <tbody>
                             <tr>
                                 <th scope="row">First Name:</th>
-                                <td>This is first name</td>
+                                <td><?php echo $_SESSION["firstname"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Last Name:</th>
-                                <td>This is last name</td>
+                                <td><?php echo $_SESSION["lastname"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Email:</th>
-                                <td>email@gmail.com</td>
+                                <td><?php echo $_SESSION["email"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Phone:</th>
-                                <td>0123456789</td>
+                                <td><?php echo $_SESSION["phone"] ?></td>
                             </tr>
                         </tbody>
                     </table>
