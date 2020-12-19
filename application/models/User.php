@@ -41,6 +41,18 @@
                 return $e->getMessage();
             }
         }
+        
+        public function updatePassword($email, $password) {
+            try {
+                $sql = $this->connection->prepare("UPDATE User SET Password = :password WHERE Email = :email");
+                return $sql->execute(array(
+                    ":email" => $email,
+                    ":password" => $password,
+                ));
+            } catch (Exception $e) {
+                return $e->getMessage();
+            }
+        }
 
 
         public function updateUser($firstName,$lastName,$email,$phone) {

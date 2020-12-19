@@ -16,7 +16,6 @@
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-start">
                     <table class="table">
-
                     </table>
                     <button type="button" class="align-self-center btn btn-secondary edit-profile" data-toggle="modal" data-target="#staticBackdrop">UPDATE PROFILE</button>
                     <a href="./ChangePassword" class="align-self-center" style="font-size: 14px;font-weight: 600;" >Change password</a>

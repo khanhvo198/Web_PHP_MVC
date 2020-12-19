@@ -20,10 +20,7 @@
                 if (isset($result["Password"])) {
                     $hash = $result["Password"];
                     if (password_verify($password, $hash)) {
-                        $_SESSION["firstname"] = $result["FirstName"];
-                        $_SESSION["lastname"] = $result["LastName"];
                         $_SESSION["email"] = $result["Email"];
-                        $_SESSION["phone"] = $result["Phone"];
                         $_SESSION["signedin"] = true;
                         header("Location: ../Profile");
                         exit();
