@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_SESSION['signedin'])){
+        header("Location: http://localhost/Web_Assignment_02/Login");
+        exit();  
+    }
+?>
+
 <?php $this->view("layout/header"); ?>
     
     <div class="changepassword row d-flex flex-column align-items-center">
