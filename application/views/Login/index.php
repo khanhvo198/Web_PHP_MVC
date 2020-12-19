@@ -1,3 +1,11 @@
+<?php
+    if(isset($_SESSION['signedin'])){
+        header("Location: http://localhost/Web_Assignment_02/Profile");
+        exit();  
+    }
+?>
+
+
 <?php $this->view("layout/header"); ?>
 
     <div class="row login">
