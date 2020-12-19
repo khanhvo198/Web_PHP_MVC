@@ -39,7 +39,7 @@
                     <a href="./About" class="align-self-center pr-4 nav-link">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Product" class="align-self-center pr-4 nav-link">Course</a>
+                    <a href="./Course" class="align-self-center pr-4 nav-link">Course</a>
                 </li>
                 <li class="nav-item">
                     <a href="./Pricing" class="align-self-center pr-4 nav-link">Pricing</a>

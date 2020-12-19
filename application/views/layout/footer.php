@@ -3,10 +3,10 @@
             <div class="col-md-8 d-flex">
                 <div class="pt-4 mr-auto">
                     <div class="d-flex">
-                        <a href="../about/about.html" class="align-self-center pr-4" style="color:#000">About us</a>
-                        <a href="../product/product.html" class="align-self-center pr-4" style="color:#000">Course</a>
-                        <a href="../pricing/pricing.html" class="align-self-center pr-4" style="color:#000">Pricing</a>
-                        <a href="../contact/contact.html" class="align-self-center pr-4" style="color:#000">Contact</a>
+                        <a href="./About" class="align-self-center pr-4" style="color:#000">About us</a>
+                        <a href="./Course" class="align-self-center pr-4" style="color:#000">Course</a>
+                        <a href="./Pricing" class="align-self-center pr-4" style="color:#000">Pricing</a>
+                        <a href="./Contact" class="align-self-center pr-4" style="color:#000">Contact</a>
                         <a href="#" class="align-self-center pr-4" style="color:#000">Login</a>
                     </div>
                     <p class="pt-3">©Copyright 2020 BK Academy</p>
