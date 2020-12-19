@@ -22,7 +22,20 @@
         </div>
     </div>
 
-    <div class="row course justify-content-center" uk-scrollspy="cls:uk-animation-slide-left; repeat:true; delay: 200">
+    <?php
+        for ($i = 0; $i < count($this->data["courses"]); $i++) {
+            $number = $i + 1;
+            $name = $this->data["courses"][$i]["Name"];
+            $description = $this->data["courses"][$i]["Description"];
+            if ($number % 2 == 1) {
+                require "./application/views/Course/coursecardleft.php";
+            } else {
+                require "./application/views/Course/coursecardright.php";
+            }
+        }  
+    ?>
+
+    <!-- <div class="row course justify-content-center" uk-scrollspy="cls:uk-animation-slide-left; repeat:true; delay: 200">
         <div class="col-md-2 text-center d-flex flex-column justify-content-center number course-border-right">01</div>
         <div class="col-md-9" style="margin-top: 3em; margin-bottom: 3em;">
             <h2>START OF PROGRAMMING - PROGRAMMING INVESTMENT PLATFORM - OOP OBJECT-ORIENTATION</h2>
@@ -36,15 +49,6 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-dark">DETAIL</button>
                     </div>
-
-                    <!-- <div class="row justify-content-around">
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
-                        </div>
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">COUNT ME IN</button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -65,15 +69,6 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-dark">DETAIL</button>
                     </div>
-                    
-                    <!-- <div class="row justify-content-around">
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
-                        </div>
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">COUNT ME IN</button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -96,15 +91,6 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-dark">DETAIL</button>
                     </div>
-                    
-                    <!-- <div class="row justify-content-around">
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
-                        </div>
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">COUNT ME IN</button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -126,15 +112,6 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-dark">DETAIL</button>
                     </div>
-                    
-                    <!-- <div class="row justify-content-around">
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
-                        </div>
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">COUNT ME IN</button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -157,19 +134,10 @@
                     <div class="text-center">
                         <button type="button" class="btn btn-dark">DETAIL</button>
                     </div>
-                    
-                    <!-- <div class="row justify-content-around">
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
-                        </div>
-                        <div class="col-md-5 col-sm-5">
-                            <button type="button" class="btn btn-dark">COUNT ME IN</button>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     
