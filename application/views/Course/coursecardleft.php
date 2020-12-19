@@ -7,7 +7,7 @@
                 <img src="./public/images/product/01.png" alt="">
             </div>
             <div class="col-md-6">
-                <p><?php echo $description ?></p>
+                <p style="line-height: 1.6em;"><?php echo $description ?></p>
                 <div class="text-center">
                     <button type="button" class="btn btn-dark">DETAIL</button>
                 </div>
