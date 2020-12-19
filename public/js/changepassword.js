@@ -23,7 +23,7 @@ $(document).ready(function(){
         }
         // post request
         $.ajax({
-            url: 'http://localhost/Web_Assignment_02/ChangePassword/process',
+            url: './ChangePassword/process',
             type: 'post',
             dataType: 'json',
             data: {'oldpassword': oldpassword, 'newpassword': newpassword},

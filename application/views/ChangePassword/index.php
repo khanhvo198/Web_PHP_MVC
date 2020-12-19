@@ -1,6 +1,6 @@
 <?php
     if(!isset($_SESSION['signedin'])){
-        header("Location: http://localhost/Web_Assignment_02/Login");
+        header("Location: ./Login");
         exit();  
     }
 ?>

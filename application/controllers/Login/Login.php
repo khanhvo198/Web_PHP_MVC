@@ -27,7 +27,7 @@
                     }
                 }
             }
-            header("Location: ./Login");
+            header("Location: ../Login");
             exit();           
         }
 

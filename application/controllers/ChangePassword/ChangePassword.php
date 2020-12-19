@@ -18,7 +18,8 @@
                 
                 $userModel = $this->model("User");
                 $result = json_decode($userModel->getUser($_SESSION["email"]), true);
-
+                
+                // echo json_encode($result);
                 if(password_verify($oldpassword, $result["Password"])) {
                     $result = $userModel->updatePassword($_SESSION["email"], $newpassword);
                     if ($result === true) {
