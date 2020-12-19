@@ -22,9 +22,9 @@
                 $result = $userModel->add($firstname, $lastname, $email, $phone, $password);
                 
                 if($result === true) {
-                    header("Location: ./Login");
+                    header("Location: ../Login");
                 } else {
-                    header("Location: ./Register");
+                    header("Location: ../Register");
                 }
             }
         }
