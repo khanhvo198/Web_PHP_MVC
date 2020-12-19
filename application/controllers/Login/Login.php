@@ -24,6 +24,7 @@
                         $_SESSION["lastname"] = $result["LastName"];
                         $_SESSION["email"] = $result["Email"];
                         $_SESSION["phone"] = $result["Phone"];
+                        $_SESSION["password"] = $result["Password"];
                         $_SESSION["signedin"] = true;
                         header("Location: http://localhost/Web_Assignment_02/Profile");
                         exit();

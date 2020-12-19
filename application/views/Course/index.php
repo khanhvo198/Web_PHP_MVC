@@ -33,14 +33,18 @@
                 <div class="col-md-6">
                     <p>If you are an IT student but weak in programming or you are someone who has worked in another industry, in the opposite field yes aspires to change careers and pursue a career in programming. This is the initial course for you.</p>
                     <p>This course will provide the full knowledge of the programming background through the JAVA language and projects so that you can visualize the problem of using programming to create simple software. This will help you see the output of the product and stimulate you to learn.</p>
-                    <div class="row justify-content-around">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark">DETAIL</button>
+                    </div>
+
+                    <!-- <div class="row justify-content-around">
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
                         </div>
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">COUNT ME IN</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -58,14 +62,18 @@
                 <div class="col-md-6">
                     <p>You are a student in schools, you are about to graduate or you are about to change careers, left your discipline and have a programming background, object oriented programming, you are not confident with what you have learned, no demo project in front of recruiters who want a job as a programming profession. This course is for you</p>
                     <p>Before you want to become a Full-Stack Developer, you need to prepare a good foundation for Front End and currently Front End is also a very hot job, you just need to search, thousands of jobs will appear. . Front End Developer will take care of all the 'fronts' of a product, thus determining the success of a product. So much work, relatively favorable start, salary is also quite high.</p>
-                    <div class="row justify-content-around">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark">DETAIL</button>
+                    </div>
+                    
+                    <!-- <div class="row justify-content-around">
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
                         </div>
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">COUNT ME IN</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -85,14 +93,18 @@
                 <div class="col-md-6">
                     <p> You want to continue to conquer your career with high salary, the hottest job today, the latest and most popular technology is Full-Stack Javascript with? VUE JS - NODE JS / Express.</p>
                     <p>Before you decide to level up, you should prepare yourself with knowledge of HTML, CSS, Bootstrap, basic Javascript, programming thinking foundation and object oriented programming. This knowledge capital is an entry requirement for this course because this course includes many in-depth projects, start-up projects.</p>
-                    <div class="row justify-content-around">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark">DETAIL</button>
+                    </div>
+                    
+                    <!-- <div class="row justify-content-around">
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
                         </div>
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">COUNT ME IN</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -111,14 +123,18 @@
                     <p>If you want to continue conquering a career with high salary, work in class corporations, building large systems, you can join an intensive Java Back end web course.</p>
                     <p>This course is for those who are passionate about code, business code, professional analysis, and like analyzing data systems, professional systems of large projects. Those who want to become Senior experts on system design analysis and leaders of Backend team.</p>
                     <p>You will be provided with ALL the knowledge to be able to APPLY NOW any company that hires professional Back End Web programming.</p>
-                    <div class="row justify-content-around">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark">DETAIL</button>
+                    </div>
+                    
+                    <!-- <div class="row justify-content-around">
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
                         </div>
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">COUNT ME IN</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -138,14 +154,18 @@
                 <div class="col-md-6">
                     <p>Always in the TOP of Mobile App programming jobs that are most recruited, React Native is sought after by many recruiting companies, from young startups, Product companies, Outsourcing companies, Freelancer ...</p>
                     <p>Salary UP TO 2500 $ TRUMP, React Native is built on a Javascript language suitable for you who already have a web platform, adding skills to help increase job opportunities, good promotion opportunities, join many projects big in the company.</p>
-                    <div class="row justify-content-around">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark">DETAIL</button>
+                    </div>
+                    
+                    <!-- <div class="row justify-content-around">
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">NEED CONSULTANT</button>
                         </div>
                         <div class="col-md-5 col-sm-5">
                             <button type="button" class="btn btn-dark">COUNT ME IN</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
