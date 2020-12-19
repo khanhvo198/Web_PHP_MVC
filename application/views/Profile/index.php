@@ -19,19 +19,19 @@
                         <tbody>
                             <tr>
                                 <th scope="row">First Name:</th>
-                                <td><?php echo $_SESSION["firstname"] ?></td>
+                                <td><?php echo $this->data["firstname"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Last Name:</th>
-                                <td><?php echo $_SESSION["lastname"] ?></td>
+                                <td><?php echo $this->data["lastname"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Email:</th>
-                                <td><?php echo $_SESSION["email"] ?></td>
+                                <td><?php echo $this->data["email"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Phone:</th>
-                                <td><?php echo $_SESSION["phone"] ?></td>
+                                <td><?php echo $this->data["phone"] ?></td>
                             </tr>
                         </tbody>
                     </table>
