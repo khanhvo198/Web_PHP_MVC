@@ -8,7 +8,7 @@
                     <p style="font-size: 14px;">Lost your password? Please enter your Email Address. You will receive a link to create a new password via email.</p>
                     <label for="email">Email Address</label>
                     <input type="email" name="email" id="email" class="form-control">
-                    <a href="#" class="btn btn-dark mt-3">RESET PASSWORD</a>
+                    <a href="#" class="btn btn-secondary mt-3">RESET PASSWORD</a>
                 </div>
             </div>
         </form>

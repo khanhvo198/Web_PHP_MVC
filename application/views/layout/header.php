@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
 
+    <link rel="stylesheet" href="./public/css/header.style.css">
     <link rel="stylesheet" href="./public/css/<?php echo $this->data["css"];?>">
     <title><?php echo $this->data["title"];?></title>
 </head>

@@ -1,16 +1,12 @@
-/* img {
+img {
     width: 100%;
     object-fit: cover;
-} */
-
-a {
-    color: black;
 }
 
-.profile {
+.register {
     background-color: #D6F7EE;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 4em;
+    padding-bottom: 4em;
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -43,19 +39,4 @@ a {
 
 .footer {
     background-color: #F6F2F1;
-}
-
-.profile-img {
-    width: 20em;
-    height: 20em;
-}
-
-
-form {
-    width: 100%;
-}
-
-
-input {
-    width: 100%;
 }

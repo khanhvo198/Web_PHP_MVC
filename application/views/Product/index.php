@@ -153,7 +153,7 @@
 
 
     
-    <div class="register row d-flex flex-column align-items-center">
+    <!-- <div class="register row d-flex flex-column align-items-center">
         <h1 style="margin-bottom: 1em;">Register for this fabulous course</h1>
         <form class="text-center d-flex flex-column align-items-center" action="">
             <input type="text" class="form-control" id="firstname" placeholder="First Name*">
@@ -168,6 +168,6 @@
                 <img src="./public/images/product/astronaut.png" alt="">
             </div>
         </form>
-    </div>
+    </div> -->
 
 <?php $this->view("layout/footer"); ?>
