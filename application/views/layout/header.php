@@ -1,3 +1,16 @@
+<?php
+    $controller = null;
+    $text = null;
+    if(!isset($_SESSION['signedin'])){
+        $controller = "./Login";
+        $text = "Login";
+    } else {
+        $controller = "./Logout";
+        $text = "Logout";
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +53,9 @@
                     <a href="./Profile" class="align-self-center pr-4 nav-link">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Login"  class="btn btn-primary align-self-center nav-link" style="color:#fff">Login</a>
+                    <form action=<?php echo $controller ?> method="post">
+                        <button name="btnLoginout" type="submit" class="btn btn-primary align-self-center nav-link" style="color:#fff"><?php echo $text ?></button>
+                    </form>
                 </li>
               </ul>
             </div>
