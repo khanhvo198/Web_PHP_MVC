@@ -12,7 +12,7 @@
                     <p class="pt-3">©Copyright 2020 BK Academy</p>
                 </div>
                 <div class="pt-2">
-                    <img src="./public/images/index/image 8.png">
+                    <img src="<?php echo $this->get_url("../public/images/index/image 8.png") ?>">
                 </div>
             </div>
         </div>

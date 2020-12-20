@@ -10,12 +10,12 @@
             <input name="password" type="password" class="form-control" id="password" placeholder="Password*">
             <button name="btnRegister" type="submit" class="btn btn-secondary">REGISTER</button>
 
-            <!-- <div class="align-self-start mt-5">
-                <img src="./public/images/product/text.png" alt="">
+            <div class="align-self-start mt-5">
+                <img src="<?php echo $this->get_url("../public/images/product/text.png") ?>" alt="">
             </div>
             <div class="align-self-center">
-                <img src="./public/images/product/astronaut.png" alt="">
-            </div> -->
+                <img src="<?php echo $this->get_url("../public/images/product/astronaut.png") ?>" alt="">
+            </div>
         </form>
     </div>
 

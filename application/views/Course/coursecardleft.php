@@ -4,7 +4,7 @@
         <h2><?php echo $name ?></h2>
         <div class="row">
             <div class="col-md-6" style="margin-bottom: 3em;">
-                <img src="./public/images/product/01.png" alt="">
+                <img src="<?php echo $this->get_url("../public/images/product/01.png"); ?>" alt="">
             </div>
             <div class="col-md-6">
                 <p style="line-height: 1.6em;"><?php echo $description ?></p>

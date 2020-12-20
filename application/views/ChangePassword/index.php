@@ -16,10 +16,10 @@
             <button name="btnSubmit" id="btnSubmit" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#resultModal">SUBMIT</button>
 
             <div class="align-self-start mt-5">
-                <img src="./public/images/product/text.png" alt="">
+                <img src="<?php echo $this->get_url("../public/images/product/text.png"); ?>" alt="">
             </div>
             <div class="align-self-center">
-                <img src="./public/images/product/astronaut.png" alt="">
+                <img src="<?php echo $this->get_url("../public/images/product/astronaut.png"); ?>" alt="">
             </div>
         </form>
     </div>

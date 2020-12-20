@@ -13,16 +13,16 @@
                 <p class="text-center" style="margin-top: 75px;font-size:20px">BK Academy  has been training developers in...</p>
                 <ul class="d-flex justify-content-around" style="padding:0">
                     <li class="col-md-3" style="margin: auto 0;">
-                        <img src="./public/images/index/go-daddy-brand.png" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-top; repeat: true; delay:300">
+                        <img src="<?php echo $this->get_url("../public/images/index/go-daddy-brand.png"); ?>" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-top; repeat: true; delay:300">
                     </li>
                     <li class="col-md-3" style="margin: auto 0;">
-                        <img src="./public/images/index/random-order-brand.png" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay:300">
+                        <img src="<?php echo $this->get_url("../public/images/index/random-order-brand.png"); ?>" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay:300">
                     </li>
                     <li class="col-md-3" style="margin: auto 0;">
-                        <img src="./public/images/index/random-bench-brand.png" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-top; repeat: true; delay:300">
+                        <img src="<?php echo $this->get_url("../public/images/index/random-bench-brand.png"); ?>" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-top; repeat: true; delay:300">
                     </li>
                     <li class="col-md-3" style="margin: auto 0;">
-                        <img src="./public/images/index/random-brand.png" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay:300">
+                        <img src="<?php echo $this->get_url("../public/images/index/random-brand.png"); ?>" class="img-fluid" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay:300">
                     </li>
                 </ul>
             </div>
@@ -36,7 +36,7 @@
                 <p class="content-left__paragraph">help people build practical skills for life.</p>
             </div>
             <div class="col-md-5 uk-overflow-hidden" style="padding:0">
-                <img src="./public/images/index/content.png" class="img-fluid w-100" style="height:750px"  class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+                <img src="<?php echo $this->get_url("../public/images/index/content.png"); ?>" class="img-fluid w-100" style="height:750px"  class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
             </div>
         </div>
 
@@ -51,17 +51,17 @@
 
         <div class="comment row d-flex justify-content-around" style="margin-top: 10rem;">
             <div class="mastery col-sm-3 text-center" uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay:300">
-                <img src="./public/images/index/mastery.png" class="img-fluid" style="width: 110px; height:100px">
+                <img src="<?php echo $this->get_url("../public/images/index/mastery.png"); ?>" class="img-fluid" style="width: 110px; height:100px">
                 <h5>Mastery takes time</h5>
                 <p>We’ve been led to believe that success happens overnight. But embracing real growth is about committing to the journey. And it all begins with having the right mindset.</p>
             </div>
             <div class="no-bs col-sm-3 text-center" uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay:400">
-                <img src="./public/images/index/no-bs.png" class="img-fluid" style="width: 110px; height:100px">
+                <img src="<?php echo $this->get_url("../public/images/index/no-bs.png"); ?>" class="img-fluid" style="width: 110px; height:100px">
                 <h5>No B.S.</h5>
                 <p>You’re tired of fast fads and hack secrets and quite frankly so am I. Where many courses skim the surface, I go deep and equip you with tactical, practical skills and tools.</p>
             </div>
             <div class="good-weird col-sm-3 text-center" uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay:500">
-                <img src="./public/images/index/good-weird.png" class="img-fluid" style="width: 110px; height:100px">
+                <img src="<?php echo $this->get_url("../public/images/index/good-weird.png"); ?>" class="img-fluid" style="width: 110px; height:100px">
                 <h5>‘Good’ Weird</h5>
                 <p>I get it. Courses can be a hellova snooze fest 😴. So when it comes to our courses, comedic sketches and odd humor comes included. It may get weird.</p>
             </div>
@@ -69,8 +69,8 @@
 
         <div class="snapshot row justify-content-around" style="margin-top: 10rem;">
             <div uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:300" class="col-md-4 background-runner" style="position: relative;  left: 0; top: 0;">
-                <img src="./public/images/index/background-runner.png" style="position: relative;left: 0;top: 0;">
-                <img src="./public/images/index/runner.png" style="position: absolute;left: 0;top: 0;">
+                <img src="<?php echo $this->get_url("../public/images/index/background-runner.png"); ?>" style="position: relative;left: 0;top: 0;">
+                <img src="<?php echo $this->get_url("../public/images/index/runner.png"); ?>" style="position: absolute;left: 0;top: 0;">
             </div>
             <div class="col-md-5">
                 <p class="snapshot__title">

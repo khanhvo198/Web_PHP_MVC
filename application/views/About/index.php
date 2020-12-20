@@ -17,7 +17,7 @@
                 <p uk-scrollspy="cls: uk-animation-slide-left; repeat: true" style="font-size:18px;font-weight:300;line-height: 21.6px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dolor nibh, auctor a ligula nec, placerat euismod eros. Nam venenatis odio vel tortor dignissim, eget imperdiet elit sodales. Donec congue mauris id neque facilisis volutpat. In ut porttitor dolor. Integer quis ipsum metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam elementum vestibulum eros, id dignissim massa. Nullam lobortis commodo ipsum, in dignissim lorem dictum quis. Donec semper diam eget iaculis finibus. Ut id sollicitudin ipsum.</p>
             </div>
             <div class="col-sm-6 mt-4 text-center">
-                <img class="img-fluid"  src="./public/images/about/illustration-1.png" width="550px" height="400px">
+                <img class="img-fluid"  src="<?php echo $this->get_url("../public/images/about/illustration-1.png") ?>" width="550px" height="400px">
             </div>
         </div>
 
@@ -29,7 +29,7 @@
 
         <div class="row mt-5">
             <div class="col-sm-6 mt-4 text-center">
-                <img class="img-fluid"  src="./public/images/about/illustration-2.png" width="550px" height="400px">
+                <img class="img-fluid"  src="<?php echo $this->get_url("../public/images/about/illustration-2.png"); ?>" width="550px" height="400px">
             </div>
 
             <div class="col-sm-6 mt-5">
@@ -48,7 +48,7 @@
                 <p uk-scrollspy="cls: uk-animation-slide-left; repeat: true" style="font-size:18px;font-weight:300;line-height: 21.6px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dolor nibh, auctor a ligula nec, placerat euismod eros. Nam venenatis odio vel tortor dignissim, eget imperdiet elit sodales. Donec congue mauris id neque facilisis volutpat. In ut porttitor dolor. Integer quis ipsum metus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam elementum vestibulum eros, id dignissim massa. Nullam lobortis commodo ipsum, in dignissim lorem dictum quis. Donec semper diam eget iaculis finibus. Ut id sollicitudin ipsum.</p>
             </div>
             <div class="col-sm-6 mt-4 text-center">
-                <img class="img-fluid"  src="./public/images/about/illustration-3.png" width="550px" height="400px">
+                <img class="img-fluid"  src="<?php echo $this->get_url("../public/images/about/illustration-3.png"); ?>" width="550px" height="400px">
             </div>
         </div>
 

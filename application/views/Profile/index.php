@@ -12,7 +12,7 @@
         <div class="col-md-12">
             <div class="row justify-content-center">
                 <div class="col-md-4 d-flex justify-content-center">
-                    <img class="profile-img" src="./public/images/profile/TC_Avatar.png" alt="">
+                    <img class="profile-img" src="<?php echo $this->get_url("../public/images/profile/TC_Avatar.png") ?>" alt="">
                 </div>
                 <div class="col-md-6 d-flex flex-column justify-content-start">
                     <table class="table">
@@ -24,10 +24,10 @@
         </div>
 
         <div class="align-self-start mt-5">
-            <img src="./public/images/product/text.png" alt="">
+            <img src="<?php echo $this->get_url("../public/images/product/text.png") ?>" alt="">
         </div>
         <div class="align-self-center">
-            <img src="./public/images/product/astronaut.png" alt="">
+            <img src="<?php echo $this->get_url("../public/images/product/astronaut.png") ?>" alt="">
         </div>
     </div>
 

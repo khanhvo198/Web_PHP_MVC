@@ -7,14 +7,14 @@
             <p>This course will equip you with the tools to help you finally push through procrastination, stay motivated, and keep yourself accountable to build program that last a lifetime. You have the potential to create lasting positive change in your path of career.</p>
         </div>
         <div class="col-md-5" style="position: relative; top: 0; left: 0;">
-            <img src="./public/images/product/cloud.png" style="position: relative; top: 10%; left: 0;" alt="" uk-scrollspy="cls:uk-animation-slide-right; repeat:true; delay: 600">
-            <img src="./public/images/product/runner 1.png" style="position: absolute; top: 0; left: 0;" alt="" uk-scrollspy="cls:uk-animation-slide-left; repeat:true; delay: 600">
+            <img src="<?php echo $this->get_url("../public/images/product/cloud.png") ;?>" style="position: relative; top: 10%; left: 0;" alt="" uk-scrollspy="cls:uk-animation-slide-right; repeat:true; delay: 600">
+            <img src="<?php echo $this->get_url("../public/images/product/runner 1.png") ;?>" style="position: absolute; top: 0; left: 0;" alt="" uk-scrollspy="cls:uk-animation-slide-left; repeat:true; delay: 600">
         </div>
     </div>
 
     <div class="row d-flex flex-wrap-reverse intro justify-content-center">
         <div class="col-md-5 mr-5" uk-scrollspy="cls:uk-animation-fade; repeat:true; delay: 200">
-            <img src="./public/images/product/Frame 5.png" alt="">
+            <img src="<?php echo $this->get_url("../public/images/product/Frame 5.png") ;?>" alt="">
         </div>
         <div class="col-md-6 d-flex flex-column justify-content-center">
             <h1 class="mb-4">The Journey of this course</h1>
