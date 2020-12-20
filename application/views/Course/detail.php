@@ -5,7 +5,7 @@
             <h2><?php echo $this->data["course"]["Name"]; ?></h2>
             <div class="row">
                 <div class="col-md-6" style="margin-bottom: 3em;">
-                    <img src="<?php echo $this->get_url("../public/images/product/01.png") ?>" alt="">
+                    <img src="<?php echo $this->get_url($this->data["course"]["Image"]) ?>" alt="">
                 </div>
                 <div class="col-md-6">
                     <table class="table">
@@ -21,6 +21,10 @@
                             <tr>
                                 <th scope="row">End Date:</th>
                                 <td><?php echo $this->data["course"]["EndDate"] ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Learning Day:</th>
+                                <td><?php echo $this->data["course"]["LearningDay"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Start Hour:</th>

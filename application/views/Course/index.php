@@ -27,6 +27,7 @@
             $number = $i + 1;
             $name = $this->data["courses"][$i]["Name"];
             $description = $this->data["courses"][$i]["Description"];
+            $image = $this->data["courses"][$i]["Image"];
             if ($number % 2 == 1) {
                 require "./application/views/Course/coursecardleft.php";
             } else {

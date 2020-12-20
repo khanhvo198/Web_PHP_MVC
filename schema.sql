@@ -17,9 +17,10 @@ create table Course (
     Price int unsigned,
     StartDate date,
     EndDate date,
-    LearningDay enum('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'),
+    LearningDay enum('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'),
     StartHour time,
     EndHour time,
+    Image varchar(255),
     Description varchar(1000),
     primary key (Name)
 );
