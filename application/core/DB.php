@@ -1,9 +1,9 @@
 <?php
     class DB {
         public $connection;
-        protected $servername = "192.168.64.7";
-        protected $username = "MyStic";
-        protected $password = "123456";
+        protected $servername = "localhost";
+        protected $username = "root";
+        protected $password = "aBcD@12345";
         protected $dbname = "BKAcademy";
 
         public function __construct() {

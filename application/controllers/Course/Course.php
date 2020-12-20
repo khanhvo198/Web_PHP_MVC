@@ -2,23 +2,26 @@
     class Course extends Controller {
         protected $data;
 
-        function index() {
+        function __construct() {
             $this->data["css"] = "course.style.css";
             $this->data["title"] = "Course";
+        }
 
+        function index() {
             $courseModel = $this->model("CourseModel");
             $allCourses = json_decode($courseModel->getAllCourses(), true);
             $this->data["courses"] = $allCourses;
-            // foreach ($allCourses as $course) {
-            //     foreach($course as $field) {
-            //         echo $field;
-            //     }
-            // }
+           
             $this->view("Course/index" , $this->data);
         }
 
-        function detail() {
-            echo "Detail";
+        function detail($name) {
+            $name = str_replace("_", " ", $name);
+        
+            $courseModel = $this->model("CourseModel");
+            $course = json_decode($courseModel->getCourse($name), true);
+            $this->data["course"] = $course;
+            $this->view("Course/detail", $this->data);
         }
 
 

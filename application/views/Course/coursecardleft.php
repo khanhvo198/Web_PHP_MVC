@@ -8,8 +8,8 @@
             </div>
             <div class="col-md-6">
                 <p style="line-height: 1.6em;"><?php echo $description ?></p>
-                <div class="text-center">
-                    <button type="button" class="btn btn-dark">DETAIL</button>
+                <div class="d-flex justify-content-center">
+                    <a href=<?php echo "./Course/detail/".str_replace(" ", "_", $name) ?> class="btn btn-dark d-flex justify-content-center align-items-center">DETAIL</a>
                 </div>
 
                 <!-- <div class="row justify-content-around">
