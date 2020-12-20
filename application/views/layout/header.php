@@ -2,10 +2,10 @@
     $controller = null;
     $text = null;
     if(!isset($_SESSION['signedin'])){
-        $controller = "./Login";
+        $controller = $this->get_url("../Login");
         $text = "Login";
     } else {
-        $controller = "./Logout";
+        $controller = $this->get_url("../Logout");
         $text = "Logout";
     }
 ?>
@@ -29,7 +29,7 @@
     <div class="container-fluid d-flex flex-column">
         <nav class="row navbar navbar-expand-lg navbar-light" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);" >
             <div class="col-md-6 brand text-center">
-                <a href="./Home" style="text-decoration: none;"><h5 style="color :white;margin:auto;">BK ACADEMY</h5></a>
+                <a href="<?php echo $this->get_url("../Home"); ?>" style="text-decoration: none;"><h5 style="color :white;margin:auto;">BK ACADEMY</h5></a>
             </div>            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -37,22 +37,22 @@
             <div class="col-md-6 collapse navbar-collapse " id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="./About" class="align-self-center pr-4 nav-link">About us</a>
+                    <a href="<?php echo $this->get_url("../About"); ?>" class="align-self-center pr-4 nav-link">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Course" class="align-self-center pr-4 nav-link">Course</a>
+                    <a href="<?php echo $this->get_url("../Course"); ?>" class="align-self-center pr-4 nav-link">Course</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Pricing" class="align-self-center pr-4 nav-link">Pricing</a>
+                    <a href="<?php echo $this->get_url("../Pricing"); ?>" class="align-self-center pr-4 nav-link">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Contact" class="align-self-center pr-4 nav-link">Contact</a>
+                    <a href="<?php echo $this->get_url("../Contact"); ?>" class="align-self-center pr-4 nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./MyClass" class="align-self-center pr-4 nav-link">My Class</a>
+                    <a href="<?php echo $this->get_url("../MyClass"); ?>" class="align-self-center pr-4 nav-link">My Class</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Profile" class="align-self-center pr-4 nav-link">Profile</a>
+                    <a href="<?php echo $this->get_url("../Profile"); ?>" class="align-self-center pr-4 nav-link">Profile</a>
                 </li>
                 <li class="nav-item">
                     <form action=<?php echo $controller ?> method="post">

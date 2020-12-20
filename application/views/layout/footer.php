@@ -3,10 +3,10 @@
             <div class="col-md-8 d-flex">
                 <div class="pt-4 mr-auto">
                     <div class="d-flex">
-                        <a href="./About" class="align-self-center pr-4" style="color:#000">About us</a>
-                        <a href="./Course" class="align-self-center pr-4" style="color:#000">Course</a>
-                        <a href="./Pricing" class="align-self-center pr-4" style="color:#000">Pricing</a>
-                        <a href="./Contact" class="align-self-center pr-4" style="color:#000">Contact</a>
+                        <a href="<?php echo $this->get_url("../About"); ?>" class="align-self-center pr-4" style="color:#000">About us</a>
+                        <a href="<?php echo $this->get_url("../Course"); ?>" class="align-self-center pr-4" style="color:#000">Course</a>
+                        <a href="<?php echo $this->get_url("../Pricing"); ?>" class="align-self-center pr-4" style="color:#000">Pricing</a>
+                        <a href="<?php echo $this->get_url("../Contact"); ?>" class="align-self-center pr-4" style="color:#000">Contact</a>
                         <a href="#" class="align-self-center pr-4" style="color:#000">Login</a>
                     </div>
                     <p class="pt-3">©Copyright 2020 BK Academy</p>
@@ -25,7 +25,7 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
 <?php
     if(isset($this->data["js"])) {
-        echo "<script src=\"./public/js/". $this->data["js"]. "\"></script>";
+        echo "<script src=\"".$this->get_url("../public/js/".$this->data["js"])."\"></script>";
     }
 ?>
 </html>

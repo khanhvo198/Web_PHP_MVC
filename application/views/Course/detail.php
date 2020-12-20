@@ -12,7 +12,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row">Price:</th>
-                                <td><?php echo $this->data["course"]["Price"] ?></td>
+                                <td><?php echo '$'. $this->data["course"]["Price"] ?></td>
                             </tr>
                             <tr>
                                 <th scope="row">Start Date:</th>
