@@ -21,6 +21,7 @@
             $courseModel = $this->model("CourseModel");
             $course = json_decode($courseModel->getCourse($name), true);
             $this->data["course"] = $course;
+
             $this->view("Course/detail", $this->data);
         }
 

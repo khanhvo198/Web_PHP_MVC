@@ -35,7 +35,7 @@
                 $result = $sql->fetch(PDO::FETCH_ASSOC);
                 return json_encode($result);
             } catch (Exception $e) {
-                return $e->getMessage();
+                return json_encode($e->getMessage());
             }
         }
 
