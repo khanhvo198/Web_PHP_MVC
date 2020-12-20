@@ -1,0 +1,44 @@
+.btn-secondary {
+    width: 120px;
+    height: 40px;
+    background: #42F2CB;
+    border: none;
+    border-radius: 0%;
+    color: #000000;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 1em;
+}
+
+
+.btn-secondary:hover {
+    background-color: #00CCFF;
+}
+
+.card {
+    margin: 1em;
+}
+
+h5 {
+    color: #000000;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.text {
+    color: black;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+
+.footer {
+    background-color: #F6F2F1;
+    
+}
