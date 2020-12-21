@@ -11,7 +11,7 @@
     <div class="text my-5">On progress classes</div>
     <div class="row mb-5">
         <?php
-            for ($i = 0; $i < 5; $i++) {
+            foreach ($this->data["onprogress"] as $course) {
                 require "./application/views/MyClass/coursecard.php";
             } 
         ?>
@@ -20,7 +20,7 @@
     <div class="text my-5">Comming classes</div>
     <div class="row mb-5">
     <?php
-            for ($i = 0; $i < 1; $i++) {
+            foreach ($this->data["comming"] as $course) {
                 require "./application/views/MyClass/coursecard.php";
             } 
         ?>
@@ -29,7 +29,7 @@
     <div class="text my-5">Finished classes</div>
     <div class="row mb-5">
     <?php
-            for ($i = 0; $i < 2; $i++) {
+            foreach ($this->data["finished"] as $course) {
                 require "./application/views/MyClass/coursecard.php";
             } 
         ?>

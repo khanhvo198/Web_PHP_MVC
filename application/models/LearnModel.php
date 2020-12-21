@@ -12,29 +12,18 @@
             }
         }
 
-        // public function getAllCourses() {
-        //     try {
-        //         $sql = $this->connection->prepare("SELECT * FROM Course");
-        //         $sql->execute();
-        //         $result = $sql->fetchAll(PDO::FETCH_ASSOC);
-        //         return json_encode($result);
-        //     } catch (Exception $e) {
-        //         return $e->getMessage();
-        //     }         
-        // }
-
-        // public function getCourse($name) {
-        //     try {
-        //         $sql = $this->connection->prepare("SELECT * FROM Course WHERE Name = :name");
-        //         $sql->execute(array(
-        //             ":name" => $name
-        //         ));
-        //         $result = $sql->fetch(PDO::FETCH_ASSOC);
-        //         return json_encode($result);
-        //     } catch (Exception $e) {
-        //         return json_encode($e->getMessage());
-        //     }
-        // }
+        public function getAllClasses($email) {
+            try {
+                $sql = $this->connection->prepare("SELECT * FROM Learn WHERE Email = :email");
+                $sql->execute(array(
+                    ":email" => $email
+                ));
+                $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+                return json_encode($result);
+            } catch (Exception $e) {
+                return json_encode($e->getMessage());
+            }         
+        }
 
         // public function updatePassword($email, $password) {
         //     try {
