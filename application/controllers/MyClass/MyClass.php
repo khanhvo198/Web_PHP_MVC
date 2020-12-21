@@ -36,5 +36,11 @@
             $this->view("MyClass/index" , $this->data);
         }
 
+        function detail() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $this->view("MyClass/detail");
+            }            
+        }
+
     }
 ?>
