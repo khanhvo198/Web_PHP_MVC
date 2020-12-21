@@ -2,8 +2,8 @@
     class DB {
         public $connection;
         protected $servername = "localhost";
-        protected $username = "root";
-        protected $password = "aBcD@12345";
+        protected $username = "BKAcademy";
+        protected $password = "123456";
         protected $dbname = "BKAcademy";
 
         public function __construct() {
