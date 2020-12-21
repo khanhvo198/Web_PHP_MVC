@@ -254,7 +254,8 @@
 
     $("body").on("click" , ".remove-course" , function () {
         let name = $(this).attr("course-name")
-        // let parent = $(this).parent().parent().parent()
+        // console.log(name)
+        let parent = $(this).parent().parent().parent()
         $.ajax({
             type: 'post',
             dataType: 'json',
@@ -264,6 +265,7 @@
             },
             success: function(data) {
                 getAllCourse()
+                // console.log(data)
             }
         })
     })

@@ -28,8 +28,8 @@ create table Course (
 create table Learn (
     Email varchar(255),
     Name varchar(255),
-    foreign key (Email) references User(Email),
-    foreign key (Name) references Course(Name),
+    foreign key (Email) references User(Email) on delete cascade,
+    foreign key (Name) references Course(Name) ON delete cascade,
     primary key (Email, Name)
 );
 
