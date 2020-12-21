@@ -22,8 +22,17 @@
                     if (password_verify($password, $hash)) {
                         $_SESSION["email"] = $result["Email"];
                         $_SESSION["signedin"] = true;
-                        header("Location: ../Profile");
-                        exit();
+                        $result = json_decode($userModel->getRole($email),true); 
+
+                        if($result["Role"] == "admin") {
+                            $_SESSION['admin'] = true;
+                            header("Location: ../Admin");
+                            exit();
+                        } else {
+                            header("Location: ../Profile");
+                            exit();
+                        }
+
                     }
                 }
             }

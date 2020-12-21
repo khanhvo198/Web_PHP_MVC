@@ -48,9 +48,15 @@
                 <li class="nav-item">
                     <a href="<?php echo $this->get_url("../Contact"); ?>" class="align-self-center pr-4 nav-link">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a href="<?php echo $this->get_url("../MyClass"); ?>" class="align-self-center pr-4 nav-link">My Class</a>
-                </li>
+                <?php if(!isset($_SESSION['admin']))  {?>
+                    <li class="nav-item">
+                        <a href="<?php echo $this->get_url("../MyClass"); ?>" class="align-self-center pr-4 nav-link">My Class</a>
+                    </li>
+                <?php } else {?>
+                    <li class="nav-item">
+                        <a href="<?php echo $this->get_url("../Admin"); ?>" class="align-self-center pr-4 nav-link">Admin</a>
+                    </li>
+                <?php }?>
                 <li class="nav-item">
                     <a href="<?php echo $this->get_url("../Profile"); ?>" class="align-self-center pr-4 nav-link">Profile</a>
                 </li>

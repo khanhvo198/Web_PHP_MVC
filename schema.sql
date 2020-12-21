@@ -3,7 +3,7 @@ create database BKAcademy;
 
 use BKAcademy;
 
-create table User (
+create table `User` (
     FirstName varchar(255),
     LastName varchar(255),
     Email varchar(255),
@@ -32,3 +32,22 @@ create table Learn (
     foreign key (Name) references Course(Name),
     primary key (Email, Name)
 );
+
+create table Role (
+    Email varchar(255),
+    Role varchar(255),
+    foreign key (Email) references User(Email),
+    primary key (Email)
+);
+
+
+drop trigger if exists auto_insert;
+create trigger auto_insert
+    AFTER insert on User
+    for each row
+insert into Role
+values (new.Email,"user");
+
+
+-- Role = "user",
+--     Email = User(Email);

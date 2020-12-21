@@ -11,7 +11,7 @@
                     ":password" => $password
                 ));
             } catch (Exception $e) {
-                return false;
+                return $e->getMessage();
             }
         }
 
@@ -70,6 +70,23 @@
                 return $e->getMessage();
             }
         }
+
+
+        public function getRole($email) {
+            try {
+                $sql = $this->connection->prepare("SELECT Role FROM Role WHERE Email =:email");
+                $sql->execute(array(
+                    ":email" => $email
+                ));
+                $result = $sql->fetch(PDO::FETCH_ASSOC);
+                return json_encode($result);
+
+            } catch (Exception $e) {
+                return $e->getMessage();
+            }
+        }
+
+
 
 
     }
