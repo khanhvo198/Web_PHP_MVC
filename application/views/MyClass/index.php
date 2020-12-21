@@ -8,7 +8,7 @@
 
 <?php $this->view("layout/header"); ?>
 
-    <div class="text my-5">On progress</div>
+    <div class="text my-5">On progress classes</div>
     <div class="row mb-5">
         <?php
             for ($i = 0; $i < 5; $i++) {
@@ -17,8 +17,16 @@
         ?>
     </div>
 
+    <div class="text my-5">Comming classes</div>
+    <div class="row mb-5">
+    <?php
+            for ($i = 0; $i < 1; $i++) {
+                require "./application/views/MyClass/coursecard.php";
+            } 
+        ?>
+    </div>
 
-    <div class="text my-5">Finished</div>
+    <div class="text my-5">Finished classes</div>
     <div class="row mb-5">
     <?php
             for ($i = 0; $i < 2; $i++) {

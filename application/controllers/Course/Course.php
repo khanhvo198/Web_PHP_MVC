@@ -21,8 +21,28 @@
             $courseModel = $this->model("CourseModel");
             $course = json_decode($courseModel->getCourse($name), true);
             $this->data["course"] = $course;
+            $this->data["js"] = "coursedetail.js";
 
             $this->view("Course/detail", $this->data);
+        }
+
+        function enroll() {
+            if(isset($_POST["btnEnroll"])) {
+                $coursename = $_POST["btnEnroll"];
+                if(isset($_SESSION["signedin"])) {
+                    $learnModel = $this->model("LearnModel");
+                    $result = $learnModel->add($_SESSION["email"], $coursename);
+                    if($result === true) {
+                        header("Location: ".$this->get_url("../MyClass"));
+                        exit();                        
+                    } else {
+                        echo "Fail";
+                    }
+                } else {
+                    header("Location: ".$this->get_url("../Login"));
+                    exit();
+                }
+            }
         }
 
 

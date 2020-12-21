@@ -37,7 +37,9 @@
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-secondary">COUNT ME IN</button>
+                        <form action="<?php echo $this->get_url("../Course/enroll") ?>" method="post">
+                            <button name="btnEnroll" value="<?php echo $this->data["course"]["Name"]; ?>" type="submit" class="btn btn-secondary">COUNT ME IN</button>
+                        </form>
                     </div>
                 </div>
             </div>
