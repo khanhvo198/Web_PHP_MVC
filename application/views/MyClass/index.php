@@ -3,6 +3,11 @@
         header("Location: ./Login");
         exit();  
     }
+
+    if(isset($_SESSION['admin'])) {
+        header("Location: ./Profile");
+        exit();
+    }
 ?>
 
 
