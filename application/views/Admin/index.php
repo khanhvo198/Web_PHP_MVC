@@ -128,15 +128,24 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputLearningDate">LearningDay:</label>
-                                <input type="text" class="form-control" name="learning_day" id="learning_day-add">
+                                <!-- <input type="text" class="form-control" name="learning_day" id="learning_day-add"> -->
+                                <select class="form-control" name="learning_day" id="learning_day-add">
+                                    <option>Monday</option>
+                                    <option>Tuesday</option>
+                                    <option>Wednesday</option>
+                                    <option>Thursday</option>
+                                    <option>Friday</option>
+                                    <option>Saturday</option>
+                                    <option>Sunday</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="inputStartHour">StartHour:</label>
-                                <input type="text" class="form-control" name="start_hour" id="start_hour-add">
+                                <input type="text" class="form-control" name="start_hour" id="start_hour-add" placeholder="hh:mm:ss">
                             </div>
                             <div class="form-group">
                                 <label for="inputENdHour">EndHour:</label>
-                                <input type="text" class="form-control" name="start_hour" id="end_hour-add">
+                                <input type="text" class="form-control" name="start_hour" id="end_hour-add" placeholder="hh:mm:ss">
                             </div>
                             <div class="form-group">
                                 <label for="inputImagePath">Image:</label>
@@ -190,15 +199,24 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputLearningDate">LearningDay:</label>
-                                <input type="text" class="form-control" name="learning_day" id="learning_day-edit">
+                                <!-- <input type="text" class="form-control" name="learning_day" id="learning_day-edit"> -->
+                                <select class="form-control" name="learning_day" id="learning_day-edit">
+                                    <option>Monday</option>
+                                    <option>Tuesday</option>
+                                    <option>Wednesday</option>
+                                    <option>Thursday</option>
+                                    <option>Friday</option>
+                                    <option>Saturday</option>
+                                    <option>Sunday</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="inputStartHour">StartHour:</label>
-                                <input type="text" class="form-control" name="start_hour" id="start_hour-edit">
+                                <input type="text" class="form-control" name="start_hour" id="start_hour-edit" placeholder="hh:mm:ss">
                             </div>
                             <div class="form-group">
                                 <label for="inputENdHour">EndHour:</label>
-                                <input type="text" class="form-control" name="start_hour" id="end_hour-edit">
+                                <input type="text" class="form-control" name="start_hour" id="end_hour-edit" placeholder="hh:mm:ss">
                             </div>
                             <div class="form-group">
                                 <label for="inputImagePath">Image:</label>
