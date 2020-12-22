@@ -2,18 +2,44 @@
     class User extends DB {
         public function add($firstname, $lastname, $email, $phone, $password) {
             try {
-                $sql = $this->connection->prepare("INSERT INTO User VALUES (:firstname, :lastname, :email, :phone, :password)");
+                $sql = $this->connection->prepare("INSERT INTO User VALUES (:firstname, :lastname, :email, :phone, :password, :role)");
                 return $sql->execute(array(
                     ":firstname" => $firstname,
                     ":lastname" => $lastname,
                     ":email" => $email,
                     ":phone" => $phone,
-                    ":password" => $password
+                    ":password" => $password,
+                    ":role" => 'user'
                 ));
             } catch (Exception $e) {
                 return $e->getMessage();
             }
         }
+
+        public function getAllUser() {
+            try {
+                $sql = $this->connection->prepare("SELECT * FROM User WHERE Email Not In (SELECT Email From User Where Role = 'admin')");
+                $sql->execute();
+                $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+                return json_encode($result);
+            } catch (Exception $e) {
+                return $e->getMessage();
+            }
+        }
+
+
+        public function deleteUser($userEmail) {
+            try {
+                $sql = $this->connection->prepare("DELETE FROM User Where Email = :email " );
+                return $sql->execute(array(
+                    ":email" => $userEmail
+                ));
+            } catch (Exception $e) {
+                return $e->getMessage();
+            }
+        }
+
+
 
         public function getUser($email) {
             try {
@@ -74,7 +100,7 @@
 
         public function getRole($email) {
             try {
-                $sql = $this->connection->prepare("SELECT Role FROM Role WHERE Email =:email");
+                $sql = $this->connection->prepare("SELECT Role FROM User WHERE Email =:email");
                 $sql->execute(array(
                     ":email" => $email
                 ));

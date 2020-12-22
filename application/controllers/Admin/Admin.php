@@ -2,6 +2,8 @@
     class Admin extends Controller {
         protected $data;
 
+
+
         function index() {
             $this->data["css"] = "admin.style.css";
             $this->data["title"] = "BK ACADEMY";
@@ -9,12 +11,45 @@
 
 
 
-            $courseModel = $this->model("CourseModel");
-            $allCourses = json_decode($courseModel->getAllCourses(), true);
-            $this->data["courses"] = $allCourses;
+            // $courseModel = $this->model("CourseModel");
+            // $allCourses = json_decode($courseModel->getAllCourses(), true);
+            // $this->data["courses"] = $allCourses;
 
             $this->view("Admin/index" , $this->data);
         }
+
+
+        function getAllUser() {
+            $userModel = $this->model("User");
+            $result = json_decode($userModel->getAllUser(),true);
+            echo json_encode($result);
+            
+        }
+
+
+        function deleteUser() {
+            $userEmail = $_POST['email'];
+            $userModel = $this->model("User");
+            $result = $userModel->deleteUser($userEmail);
+            echo json_encode($result);
+        }
+
+        function getUser() {
+            $userEmail = $_POST['email'];
+            $userModel = $this->model("User");
+            $result = json_decode($userModel->getProfileUser($userEmail),true);
+            echo json_encode($result);
+        }
+
+
+
+        function updateUser() {
+            // $user
+        }
+
+
+
+
 
 
         function addCourse() {

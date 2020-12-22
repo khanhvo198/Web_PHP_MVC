@@ -28,7 +28,7 @@
                             <h2>User Management</h2>
                         </div>
                         <div class="col text-right">
-                            <button type="button" name="add_user" id="add_user" class="btn btn-success btn-sm"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <!-- <button type="button" name="add_user" id="add_user" class="btn btn-success btn-sm"></button> -->
                         </div>
                     </div>
                 </div>
@@ -37,19 +37,87 @@
                         <table class="table table-striped table-bordered" id="user_table">
                             <thead>
                                 <tr>
-                                    <th>Image</th>
-                                    <th>User Name</th>
-                                    <th>User Contact No.</th>
-                                    <th>User Email</th>
-                                    <th>Created On</th>					
-                                    <th>Action</th>
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
                                 </tr>
                             </thead>
+                            <tbody>
+
+                            </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+        <div class="modal fade" id="edit-user" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="edit-user-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="edit-user-label">Edit User</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName">FirstName:</label>
+                                <input type="text" class="form-control" name="first_name"  id="first_name-edit" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPrice">LastName</label>
+                                <input type="text" class="form-control" name="last_name" id="last_name-edit" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputStartDate">Email:</label>
+                                <input type="email" class="form-control" name="email" id="email-edit" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEndDate">Phone:</label>
+                                <input type="number" class="form-control" name="phone" id="phone-edit" disabled>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        <!-- <button type="button" class="btn btn-primary" id="update-user">Edit</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -255,8 +323,143 @@
 
 <?php $this->view("layout/footer");?>
 
+
 <script>
-    $("#user").hide()
+
+
+    const getAllUser = () => {
+        $.ajax({
+            dataType: 'json',
+            url: './Admin/getAllUser',
+            success: (data) => {
+                printUserData(data)
+            }
+        })
+
+    }
+    getAllUser()
+
+
+    const printUserData = (data) => {
+        rows = ``
+        data.map((row) => {
+            rows += `<tr>`
+            rows += `<td width="100px;">${row.FirstName}</td>`
+            rows += `<td>${row.LastName}</td>`
+            rows += `<td>${row.Email}</td>`
+            rows += `<td>${row.Phone}</td>`
+            rows += `<td>`
+            rows += `<div class="row justify-content-around">`
+            rows += `<button class="btn btn-primary edit-user mb-3" style="color:white" data-toggle="modal" data-target="#edit-user" user-email="${row.Email}" >View      <i class="fa fa-eye" aria-hidden="true"></i></button>`
+            rows += `<button class="btn btn-danger remove-user mb-3" user-email="${row.Email}"><i class="fa fa-trash" aria-hidden="true"></i></button>`
+            rows += `</div>`
+            rows += `</td>`
+            rows += `tr`
+        })
+
+        $("#user tbody").html(rows)
+
+    }
+
+
+
+    $("body").on("click" , ".remove-user" , function () {
+        let email = $(this).attr("user-email")
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: './Admin/deleteUser',
+            data: {
+                email: email
+            },
+            success: function(data) {
+                getAllUser()
+            }
+        })
+    })
+
+
+    $("body").on("click", ".edit-user" , function() {
+        let email = $(this).attr("user-email")
+        // console.log(name)
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: './Admin/getUser',
+            data: {
+                email: email
+            },
+            success: function(data) {
+                $("#first_name-edit").val(data.FirstName);
+                $("#last_name-edit").val(data.LastName);
+                $("#email-edit").val(data.Email);
+                $("#phone-edit").val(data.Phone);
+            }
+        })
+    })
+
+
+
+    // $(".modal").on("click" , "#update-user", function() {
+
+    //     let firstName = $("#first_name-edit").val()
+    //     let lastName = $("#last_name-edit").val()
+    //     let email = $("#email-edit").val()
+    //     let phone = $("#phone-edit").val()
+
+    //     $.ajax({
+    //         dataType:'json',
+    //         type: 'post',
+    //         url : './Admin/editCourse',
+    //         data : {
+    //             firstName : firstName,
+    //             lastName : lastName,
+    //             email : email,
+    //             phone : phone,
+
+    //         },
+    //         success: (data)=> {
+    //             console.log(data)
+    //             $("#first_name-edit").val("")
+    //             $("#last_name-edit").val("")
+    //             $("#email-edit").val("")
+    //             $("#phone-edit").val("")
+    //             getAllUser()
+    //             $(".modal").modal('hide')
+    //         }
+    //     })
+
+    // })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $("#user").show()
+    $("#course").hide()
     $("body").on("click" ,'.tab-links' , function () {
         let content = $(this).attr("data-attr")
         if(content === "user") {
@@ -301,6 +504,7 @@
                 course_name: name
             },
             success: function(data) {
+                // console.log(data)
                 $("#name-edit").val(data.Name)
                 $("#price-edit").val(data.Price)
                 $("#start_date-edit").val(data.StartDate)
@@ -328,8 +532,6 @@
         let image = $("#image-edit").val()
         let description = $("#description-edit").val()
 
-        console.log(name)
-
 
         $.ajax({
             dataType:'json',
@@ -347,16 +549,16 @@
                 description: description
             },
             success: (data)=> {
-                console.log(data)
-                $("#name-add").val("")
-                $("#price-add").val("")
-                $("#start_date-add").val("")
-                $("#end_date-add").val("")
-                $("#learning_day-add").val("")
-                $("#start_hour-add").val("")
-                $("#end_hour-add").val("")
-                $("#image-add").val("")
-                $("#description-add").val("")
+                // console.log(data)
+                // $("#name-add").val("")
+                // $("#price-add").val("")
+                // $("#start_date-add").val("")
+                // $("#end_date-add").val("")
+                // $("#learning_day-add").val("")
+                // $("#start_hour-add").val("")
+                // $("#end_hour-add").val("")
+                // $("#image-add").val("")
+                // $("#description-add").val("")
                 getAllCourse()
                 $(".modal").modal('hide')
             }

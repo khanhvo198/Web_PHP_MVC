@@ -9,6 +9,7 @@ create table `User` (
     Email varchar(255),
     Phone int,
     Password varchar(255),
+    Role varchar(255),
     primary key (Email)
 );
 
@@ -33,20 +34,20 @@ create table Learn (
     primary key (Email, Name)
 );
 
-create table Role (
-    Email varchar(255),
-    Role varchar(255),
-    foreign key (Email) references User(Email),
-    primary key (Email)
-);
+-- create table Role (
+--     Email varchar(255),
+--     Role varchar(255),
+--     foreign key (Email) references User(Email) on delete cascade,
+--     primary key (Email)
+-- );
 
 
 drop trigger if exists auto_insert;
-create trigger auto_insert
-    AFTER insert on User
-    for each row
-insert into Role
-values (new.Email,"user");
+-- create trigger auto_insert
+--     AFTER insert on User
+--     for each row
+-- insert into Role
+-- values (new.Email,"user");
 
 
 -- Role = "user",
