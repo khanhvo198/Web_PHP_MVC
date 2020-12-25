@@ -9,11 +9,37 @@
 <?php $this->view("layout/header"); ?>
 
     <div class="profile row justify-content-center" style="height:80vh;">
+    <div class="alert alert-primary alert-dismissible fade" style="display:none">
+        Update success.
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
         <div class="col-md-12">
             <div class="row justify-content-center">
-                <div class="col-md-4 d-flex justify-content-center">
+                <!-- <div class="col-md-4 d-flex align-items-center flex-column">
                     <img class="profile-img" src="<?php echo $this->get_url("../public/images/profile/TC_Avatar.png") ?>" alt="">
+
+                </div> -->
+                <div class="col-md-4 d-flex align-items-center flex-column">
+                    <div class="avatar-wrapper mt-0">
+                        <img class="profile-img" src="<?php 
+                            if ($this->data['avatar'] != '') { 
+                                echo $this->get_url("../".$this->data['avatar'].'"') ;
+                            } 
+                            else echo $this->get_url("../public/images/profile/TC_Avatar.png");
+                            ?>" alt="">
+                            <!-- <img src="<?php echo $this->get_url("../".$this->data['avatar'].'"') ;?> class="profile-img" alt=""> -->
+                        <div class="upload-button">
+                            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                        </div>
+                        <input class="file-upload" type="file" name="avatar" accept="image/*"/>
+
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-submit-img" style="display:none">Submit</button>
+                    </div>
                 </div>
+                
+
                 <div class="col-md-6 d-flex flex-column justify-content-start">
                     <table class="table">
                     </table>
@@ -154,7 +180,54 @@
 
 
 
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
+            reader.onload = function (e) {
+                $('.profile-img').attr('src', e.target.result);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+   
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+    
+    $(".upload-button").on('click', function() {
+        $(".file-upload").click();
+        $(".btn-submit-img").show()
+    });
+
+    $("body").on('click', '.btn-submit-img' , function() {
+        // console.log($('.profile-img').attr('src'))
+
+        let formData = new FormData();
+        let files = $('.file-upload')[0].files;
+        // console.log(files)
+        // Check file selected or not
+        if(files.length > 0 ){
+        formData.append('avatar',files[0]);
+        // console.log(formData)
+        $.ajax({
+            url: './Profile/updateAvatar',
+            type: 'post',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(data){
+                $(".alert").addClass('show')
+                $('.alert').css("display","")
+                $('.btn-submit-img').hide()
+            },
+        });
+        } else{
+            alert("Please select a file.");
+        }
+
+    })
 
 
 

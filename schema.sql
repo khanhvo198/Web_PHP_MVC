@@ -10,6 +10,7 @@ create table `User` (
     Phone int,
     Password varchar(255),
     Role varchar(255),
+    avatar text,
     primary key (Email)
 );
 
