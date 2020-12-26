@@ -35,6 +35,17 @@ create table Learn (
     primary key (Email, Name)
 );
 
+
+create table Comments (
+    Id int  AUTO_INCREMENT,
+    Email varchar(255),
+    Name varchar(255),
+    Comment text,
+    foreign key (Email) references User(Email) on delete cascade,
+    foreign key (Name) references Course(Name) ON delete cascade,
+    primary key (Id)
+)
+
 -- create table Role (
 --     Email varchar(255),
 --     Role varchar(255),

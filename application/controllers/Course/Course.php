@@ -17,7 +17,14 @@
 
         function detail($name) {
             $name = str_replace("_", " ", $name);
-        
+            
+            $modelUser = $this->model("User");
+            $result = json_decode($modelUser->getUser($_SESSION['email']),true);
+            $this->data['avatar'] = $result['avatar'];
+
+
+
+
             $courseModel = $this->model("CourseModel");
             $course = json_decode($courseModel->getCourse($name), true);
             $this->data["course"] = $course;
@@ -25,6 +32,25 @@
 
             $this->view("Course/detail", $this->data);
         }
+
+        function addComment() {
+            $email = $_POST['email'];
+            $courseName = $_POST['courseName'];
+            $comment = $_POST['comment'];
+            $commentModel = $this->model("Comments");
+            $result = $commentModel->add($email,$courseName,$comment);
+            echo $result;
+            // var_dump($email);
+        }
+
+        function getAllComments() {
+            $courseName = $_POST['courseName'];
+            $commentModel = $this->model("Comments");
+            $result = $commentModel->getAllComments($courseName);
+            echo $result;
+        }
+
+
 
         function enroll() {
             if(isset($_POST["btnEnroll"])) {
