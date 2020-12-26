@@ -9,9 +9,9 @@
 <?php $this->view("layout/header"); ?>
 
     <div class="profile row justify-content-center" style="height:80vh;">
-    <div class="alert alert-primary alert-dismissible fade" style="display:none">
+    <div class="alert alert-primary fade hidden" style="display:none">
         Update success.
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <button type="button" class="close-alert close">&times;</button>
     </div>
         <div class="col-md-12">
             <div class="row justify-content-center">
@@ -218,6 +218,7 @@
             contentType: false,
             processData: false,
             success: function(data){
+                $(".alert").removeClass('hidden')
                 $(".alert").addClass('show')
                 $('.alert').css("display","")
                 $('.btn-submit-img').hide()
@@ -229,6 +230,12 @@
 
     })
 
+
+    $("body").on('click', '.close-alert', function() {
+        $(".alert").css("display","none")
+        $(".alert").removeClass('show')
+        $('.alert').addClass('hidden')
+    })
 
 
 
