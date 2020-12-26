@@ -18,11 +18,11 @@
         function detail($name) {
             $name = str_replace("_", " ", $name);
             
-            $modelUser = $this->model("User");
-            $result = json_decode($modelUser->getUser($_SESSION['email']),true);
-            $this->data['avatar'] = $result['avatar'];
-
-
+            if(isset($_SESSION['email'])) {
+                $modelUser = $this->model("User");
+                $result = json_decode($modelUser->getUser($_SESSION['email']),true);
+                $this->data['avatar'] = $result['avatar'];
+            }
 
 
             $courseModel = $this->model("CourseModel");
@@ -34,7 +34,7 @@
         }
 
         function addComment() {
-            $email = $_POST['email'];
+            $email = $_SESSION['email'];
             $courseName = $_POST['courseName'];
             $comment = $_POST['comment'];
             $commentModel = $this->model("Comments");
