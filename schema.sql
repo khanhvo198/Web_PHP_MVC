@@ -46,21 +46,3 @@ create table Comments (
     primary key (Id)
 )
 
--- create table Role (
---     Email varchar(255),
---     Role varchar(255),
---     foreign key (Email) references User(Email) on delete cascade,
---     primary key (Email)
--- );
-
-
-drop trigger if exists auto_insert;
--- create trigger auto_insert
---     AFTER insert on User
---     for each row
--- insert into Role
--- values (new.Email,"user");
-
-
--- Role = "user",
---     Email = User(Email);
