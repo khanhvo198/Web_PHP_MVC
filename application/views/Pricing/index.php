@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-md-5 card d-flex flex-column align-items-center">
-            <img src=".<?php echo $this->get_url("../public/images/pricing/image 10.png"); ?> class="card-img-top" alt="">
+            <img src="<?php echo $this->get_url("../public/images/pricing/image 10.png"); ?>" class="card-img-top" alt="">
             <h3>For the ones undergraduated</h3>
             <p uk-scrollspy="cls:uk-animation-slide-bottom; repeat:true; delay: 200">Do any of the following apply to you?</p>
             <hr>
